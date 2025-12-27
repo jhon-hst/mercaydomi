@@ -1,7 +1,5 @@
-Crear proyecto base
-Repositorio
 buscar diseño
-montar todas las vistas
+montar todas las vistas ✅
 configurar idiomas
 configurar colores
 configurar tailwind
