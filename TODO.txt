@@ -1,0 +1,75 @@
+Crear proyecto base
+Repositorio
+buscar diseño
+montar todas las vistas
+configurar idiomas
+configurar colores
+configurar tailwind
+capertas dentro de src
+    - hooks
+    - components
+        - Text
+        - Button
+    - utils
+    - libs
+    - contants
+Crear proyecto en supabase (test)
+    - pensar en la arquitectura de supabase
+Crear Proyecto en clerk
+
+
+
+Subir la primera versión de la app test
+Subir la primera versión de la app Pro
+
+
+LA APP PODRÁ
+MVP
+Mostrar productos una lista de productos
+Pago contra entrega 
+Categorías
+Buscador
+Carrito
+Login
+Precios, cantidades, incrementar o decrementar unids 
+Perfil de usuario, dirección, nombre, correo, teléfono, guardar medios de pago
+Al detal y al mayor
+Idiomas español y inglés por defecto (español)
+
+
+Vistas: 
+Home
+Banners de publicidad
+Carrusel de categorías
+Productos
+
+
+Splash
+Logo
+Carrito
+Eliminar elementos
+Incrementar cantidades
+Perfil 
+Nombre
+Correo 
+Dirección
+Categorías
+Buscador
+Atras
+
+
+Producto
+Agregar al carrito
+Detalles
+Imagenes
+Video
+
+
+
+
+
+
+
+Wish
+Mostrar videos de cocina con las recetas, y poder enviar el domicilio con todo lo necesario para hacer este plato, además podrá calcular para cuantas personas es y así incrementar la cantidad de productos
+Hacer pagos desde la App
