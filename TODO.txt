@@ -1,7 +1,10 @@
-buscar diseño
 montar todas las vistas ✅
+configurar colores ✅
+buscar diseño https://insightlancer.com/figma-ui-kits/grocery-app-ui-kit/
+buscar fuentes
+buscar colores
 configurar idiomas
-configurar colores
+configurar fuentes
 configurar tailwind
 capertas dentro de src
     - hooks
