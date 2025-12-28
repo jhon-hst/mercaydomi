@@ -1,7 +1,7 @@
 montar todas las vistas ✅
 configurar colores ✅
-buscar diseño https://insightlancer.com/figma-ui-kits/grocery-app-ui-kit/
-buscar fuentes
+buscar diseño https://insightlancer.com/figma-ui-kits/grocery-app-ui-kit/ ✅
+buscar fuentes ✅
 buscar colores
 configurar idiomas
 configurar fuentes
@@ -22,7 +22,7 @@ Crear Proyecto en clerk
 
 Subir la primera versión de la app test
 Subir la primera versión de la app Pro
-
+La app siempre debe estar en vertical
 
 LA APP PODRÁ
 MVP

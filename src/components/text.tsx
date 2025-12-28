@@ -10,15 +10,15 @@ interface TextProps {
 }
 
 const getFontFamily = (type?: TextType): string => {
-    if (!type) return "Inter-Black"
+    if (!type) return "Inter-Regular"
     
     // Títulos usan Bold
     if (type.startsWith("t")) {
-        return "Inter-Black"
+        return "Inter-Bold"
     }
     
     // Párrafos usan Regular
-    return "Inter-Black"
+    return "Inter-Regular"
 }
 
 const getDefaultSize = (type?: TextType): number => {

@@ -45,14 +45,14 @@
         "expo-font",
         {
           "fonts": [
-            "./src/assets/fonts/inter/Inter-Black.otf",
-            "./src/assets/fonts/inter/Inter-Bold.otf",
-            "./src/assets/fonts/inter/Inter-ExtraBold.otf",
-            "./src/assets/fonts/inter/Inter-ExtraLight.otf",
-            "./src/assets/fonts/inter/Inter-Medium.otf",
-            "./src/assets/fonts/inter/Inter-Regular.otf",
-            "./src/assets/fonts/inter/Inter-SemiBold.otf",
-            "./src/assets/fonts/inter/Inter-Thin.otf"
+            "src/assets/fonts/inter/Inter-ExtraLight.otf",
+            "src/assets/fonts/inter/Inter-Light.otf",
+            "src/assets/fonts/inter/Inter-Regular.otf",
+            "src/assets/fonts/inter/Inter-Medium.otf",
+            "src/assets/fonts/inter/Inter-SemiBold.otf",
+            "src/assets/fonts/inter/Inter-Bold.otf",
+            "src/assets/fonts/inter/Inter-ExtraBold.otf",
+            "src/assets/fonts/inter/Inter-Black.otf"
           ]
         }
       ]
