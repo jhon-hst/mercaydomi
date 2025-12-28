@@ -3,7 +3,9 @@ configurar colores ✅
 buscar diseño https://insightlancer.com/figma-ui-kits/grocery-app-ui-kit/ ✅
 buscar fuentes ✅
 buscar colores ✅
+configurar colores ✅
 configurar fuentes ✅
+configurar sizes
 configurar idiomas
 configurar Eslint
 capertas dentro de src

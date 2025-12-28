@@ -9,14 +9,26 @@ export const Colors = {
     textPrimary: '#242424',
     textSecondary: "#484848",
     background: '#FFFFFF',
-    backgroundSecondary: "#CFCFCF"
-
+    backgroundSecondary: "#F5F5F5",
+    border: "#E0E0E0",
+    error: "#DC3545",
+    success: "#28A745",
+    warning: "#FFC107",
+    info: "#17A2B8",
   },
   dark: {
     primary: "#01AC66",
-    textPrimary: '#242424',
-    textSecondary: "#484848",
-    background: '#FFFFFF',
-    backgroundSecondary: "#CFCFCF"
+    textPrimary: '#FFFFFF',
+    textSecondary: "#B0B0B0",
+    background: '#121212',
+    backgroundSecondary: "#1E1E1E",
+    border: "#333333",
+    error: "#FF5252",
+    success: "#4CAF50",
+    warning: "#FFB74D",
+    info: "#42A5F5",
   },
 };
+
+export type ColorScheme = 'light' | 'dark';
+export type ColorKey = keyof typeof Colors.light;

@@ -1,15 +1,28 @@
+import { useColors } from "@/hooks"
 import { Text as NativeText, StyleSheet, TextStyle } from "react-native"
 
 type TextType = "t1" | "t2" | "t3" | "t4" | "t5" | "p1" | "p2" | "p3" | "p4" | "p5"
+
+type FontFamilyType = 
+    "Inter-ExtraLight" |
+    "Inter-Light" |
+    "Inter-Regular" |
+    "Inter-Medium" |
+    "Inter-SemiBold" |
+    "Inter-Bold" |
+    "Inter-ExtraBold" |
+    "Inter-Black"
 
 interface TextProps {
     children: string | React.ReactNode
     type?: TextType
     size?: number
     style?: TextStyle
+    color?: "primary" | "textPrimary" | "textSecondary",
+    fontFamily?: FontFamilyType
 }
 
-const getFontFamily = (type?: TextType): string => {
+const getFontFamilyByType = (type?: TextType): FontFamilyType => {
     if (!type) return "Inter-Regular"
     
     // Títulos usan Bold
@@ -39,10 +52,12 @@ const getDefaultSize = (type?: TextType): number => {
     }
 }
 
-export const Text = ({ children, type, size, style }: TextProps) => {
-    const fontFamily = getFontFamily(type)
+export const Text = ({ children, type, size, style, color = "textPrimary", fontFamily }: TextProps) => {
+    const colors = useColors()
+    const defaultFontFamily = fontFamily || getFontFamilyByType(type)
     const fontSize = size ?? getDefaultSize(type)
-    const styles = createStyles({fontFamily, fontSize})
+    const styles = createStyles({fontFamily: defaultFontFamily, fontSize, textColor: colors[color]})
+
     return (
         <NativeText
             style={[
@@ -55,9 +70,10 @@ export const Text = ({ children, type, size, style }: TextProps) => {
     )
 }
 
-const createStyles = ({fontFamily, fontSize}: {fontFamily: string, fontSize: number}) => StyleSheet.create({
+const createStyles = ({fontFamily, fontSize, textColor}: {fontFamily: string, fontSize: number, textColor: string}) => StyleSheet.create({
     baseStyles: {
         fontFamily,
         fontSize,
+        color: textColor,
     }
 })
