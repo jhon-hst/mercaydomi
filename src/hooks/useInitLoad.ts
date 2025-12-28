@@ -1,7 +1,10 @@
 import '@/i18n';
 import { useFonts } from 'expo-font';
-import { SplashScreen } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
+
+SplashScreen.preventAutoHideAsync();
+
 export const useInitLoad = () => {
   const [loaded, setLoaded] = useState(false);
 
@@ -18,7 +21,7 @@ export const useInitLoad = () => {
 
   useEffect(() => {
     if (loadedFonts || errorFonts) {
-      SplashScreen.hideAsync();
+      SplashScreen.hide();
       setLoaded(true);
     }
   }, [loadedFonts, errorFonts]);

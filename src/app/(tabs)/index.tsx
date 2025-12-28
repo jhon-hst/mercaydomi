@@ -19,7 +19,7 @@ export default function Home() {
         {t('welcome')}
       </Text>
       <Text type="p2" color="textSecondary">
-        Bienvenido a MercayDomi
+        Bienvenido a mercadomy
       </Text>
     </View>
   );

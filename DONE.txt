@@ -1,2 +1,19 @@
 Crear proyecto base ✅
 Repositorio ✅
+montar todas las vistas ✅
+configurar colores ✅
+buscar diseño https://insightlancer.com/figma-ui-kits/grocery-app-ui-kit/ ✅
+buscar fuentes ✅
+buscar colores ✅
+configurar colores ✅
+configurar fuentes ✅
+configurar sizes ✅
+capertas dentro de src ✅
+    - hooks ✅ 
+    - components ✅
+        - Text ✅
+    - utils ✅
+    - libs ✅
+    - contants ✅
+configurar Eslint ✅
+configurar idiomas ✅
