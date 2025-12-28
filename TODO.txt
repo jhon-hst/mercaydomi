@@ -1,6 +1,6 @@
 
 
-splash
+splash ✅
 Button
 onboarding
 login
