@@ -1,4 +1,4 @@
-import { Text as NativeText, TextStyle } from "react-native"
+import { Text as NativeText, StyleSheet, TextStyle } from "react-native"
 
 type TextType = "t1" | "t2" | "t3" | "t4" | "t5" | "p1" | "p2" | "p3" | "p4" | "p5"
 
@@ -42,14 +42,11 @@ const getDefaultSize = (type?: TextType): number => {
 export const Text = ({ children, type, size, style }: TextProps) => {
     const fontFamily = getFontFamily(type)
     const fontSize = size ?? getDefaultSize(type)
-
+    const styles = createStyles({fontFamily, fontSize})
     return (
         <NativeText
             style={[
-                {
-                    fontFamily,
-                    fontSize,
-                },
+                styles.baseStyles,
                 style,
             ]}
         >
@@ -57,3 +54,10 @@ export const Text = ({ children, type, size, style }: TextProps) => {
         </NativeText>
     )
 }
+
+const createStyles = ({fontFamily, fontSize}: {fontFamily: string, fontSize: number}) => StyleSheet.create({
+    baseStyles: {
+        fontFamily,
+        fontSize,
+    }
+})

@@ -2,10 +2,10 @@ montar todas las vistas ✅
 configurar colores ✅
 buscar diseño https://insightlancer.com/figma-ui-kits/grocery-app-ui-kit/ ✅
 buscar fuentes ✅
-buscar colores
+buscar colores ✅
+configurar fuentes ✅
 configurar idiomas
-configurar fuentes
-configurar tailwind
+configurar Eslint
 capertas dentro de src
     - hooks
     - components
@@ -19,7 +19,7 @@ Crear proyecto en supabase (test)
 Crear Proyecto en clerk
 
 
-
+configurar CD/CI
 Subir la primera versión de la app test
 Subir la primera versión de la app Pro
 La app siempre debe estar en vertical

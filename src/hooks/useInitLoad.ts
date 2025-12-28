@@ -1,8 +1,10 @@
 import { useFonts } from "expo-font";
 import { SplashScreen } from "expo-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const useInitLoad = () => {
+    const [loaded, setLoaded] = useState(false);
+
     const [loadedFonts, errorFonts] = useFonts({
         'Inter-ExtraLight': require('../assets/fonts/inter/Inter-ExtraLight.otf'),
         'Inter-Light': require('../assets/fonts/inter/Inter-Light.otf'),
@@ -17,8 +19,12 @@ export const useInitLoad = () => {
     useEffect(() => {
         if (loadedFonts || errorFonts) {
             SplashScreen.hideAsync();
+            setLoaded(true)
         }
     }, [loadedFonts, errorFonts]);
 
-    return [];
+    return {
+        loaded
+    }
+    
 }
