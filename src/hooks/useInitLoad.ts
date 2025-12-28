@@ -1,7 +1,7 @@
+import '@/i18n';
 import { useFonts } from 'expo-font';
 import { SplashScreen } from 'expo-router';
 import { useEffect, useState } from 'react';
-
 export const useInitLoad = () => {
   const [loaded, setLoaded] = useState(false);
 

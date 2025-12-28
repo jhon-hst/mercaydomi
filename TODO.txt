@@ -13,8 +13,8 @@ capertas dentro de src ✅
     - utils ✅
     - libs ✅
     - contants ✅
-configurar idiomas
-configurar Eslint
+configurar Eslint ✅
+configurar idiomas ✅
 
 splash
 Button

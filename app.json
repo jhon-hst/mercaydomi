@@ -41,7 +41,7 @@
           }
         }
       ],
-       [
+      [
         "expo-font",
         {
           "fonts": [
@@ -55,7 +55,8 @@
             "src/assets/fonts/inter/Inter-Black.otf"
           ]
         }
-      ]
+      ],
+      "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true,

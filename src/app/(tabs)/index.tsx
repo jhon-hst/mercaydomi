@@ -1,10 +1,11 @@
 import { Text } from '@/components/text';
 import { useColors } from '@/hooks';
+import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
 export default function Home() {
   const colors = useColors();
-
+  const { t } = useTranslation();
   return (
     <View
       style={{
@@ -15,7 +16,7 @@ export default function Home() {
       }}
     >
       <Text type="t1" color="primary">
-        Home
+        {t('welcome')}
       </Text>
       <Text type="p2" color="textSecondary">
         Bienvenido a MercayDomi
