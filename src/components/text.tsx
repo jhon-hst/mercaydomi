@@ -1,4 +1,5 @@
 import { useColors } from "@/hooks"
+import { scale } from "@/utils"
 import { Text as NativeText, StyleSheet, TextStyle } from "react-native"
 
 type TextType = "t1" | "t2" | "t3" | "t4" | "t5" | "p1" | "p2" | "p3" | "p4" | "p5"
@@ -38,17 +39,17 @@ const getDefaultSize = (type?: TextType): number => {
     if (!type) return 14
     
     switch (type) {
-        case "t1": return 32
-        case "t2": return 28
-        case "t3": return 24
-        case "t4": return 20
-        case "t5": return 18
-        case "p1": return 18
-        case "p2": return 16
-        case "p3": return 14
-        case "p4": return 12
-        case "p5": return 10
-        default: return 14
+        case "t1": return scale(32)
+        case "t2": return scale(28)
+        case "t3": return scale(24)
+        case "t4": return scale(20)
+        case "t5": return scale(18)
+        case "p1": return scale(18)     
+        case "p2": return scale(16)
+        case "p3": return scale(14)
+        case "p4": return scale(12)
+        case "p5": return scale(10) 
+        default: return scale(14)
     }
 }
 
@@ -73,7 +74,8 @@ export const Text = ({ children, type, size, style, color = "textPrimary", fontF
 const createStyles = ({fontFamily, fontSize, textColor}: {fontFamily: string, fontSize: number, textColor: string}) => StyleSheet.create({
     baseStyles: {
         fontFamily,
-        fontSize,
+        fontSize: scale(fontSize),
         color: textColor,
+
     }
 })
