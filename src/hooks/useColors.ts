@@ -1,9 +1,9 @@
-import { useColorScheme } from "react-native";
-import { Colors, ColorScheme } from "@/constants/theme";
+import { Colors, ColorScheme } from '@/constants/theme';
+import { useColorScheme } from 'react-native';
 
 /**
  * Hook que devuelve los colores del tema actual (light/dark)
- * 
+ *
  * @example
  * const colors = useColors();
  * <View style={{ backgroundColor: colors.background }}>
@@ -13,6 +13,6 @@ import { Colors, ColorScheme } from "@/constants/theme";
 export const useColors = () => {
   const colorScheme = useColorScheme();
   const scheme: ColorScheme = colorScheme === 'dark' ? 'dark' : 'light';
-  
+
   return Colors[scheme];
 };

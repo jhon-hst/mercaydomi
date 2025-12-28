@@ -1,5 +1,5 @@
-import { Text } from "react-native";
+import { Text } from 'react-native';
 
 export default function Product() {
-    return <Text>Product</Text>
+  return <Text>Product</Text>;
 }

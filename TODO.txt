@@ -5,17 +5,22 @@ buscar fuentes ✅
 buscar colores ✅
 configurar colores ✅
 configurar fuentes ✅
-configurar sizes
+configurar sizes ✅
+capertas dentro de src ✅
+    - hooks ✅ 
+    - components ✅
+        - Text ✅
+    - utils ✅
+    - libs ✅
+    - contants ✅
 configurar idiomas
 configurar Eslint
-capertas dentro de src
-    - hooks
-    - components
-        - Text
-        - Button
-    - utils
-    - libs
-    - contants
+
+splash
+Button
+onboarding
+login
+
 Crear proyecto en supabase (test)
     - pensar en la arquitectura de supabase
 Crear Proyecto en clerk
