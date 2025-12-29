@@ -45,7 +45,7 @@ export const LayoutProvider = ({ children }: LayoutProviderProps) => {
       }}
     >
       <SafeAreaView style={containerStyle} edges={edges}>
-        <StatusBar style={statusBarStyle} />
+        <StatusBar backgroundColor="#000000" />
         {children}
       </SafeAreaView>
     </LayoutContext.Provider>

@@ -5,6 +5,6 @@ export const useOnboarding = () => {
   const { setEdges } = useLayout();
 
   useLayoutEffect(() => {
-    setEdges(['bottom', 'left', 'right']);
+    setEdges(['top', 'bottom', 'left', 'right']);
   }, [setEdges]);
 };
