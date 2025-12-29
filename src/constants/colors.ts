@@ -32,3 +32,4 @@ export const Colors = {
 
 export type ColorScheme = 'light' | 'dark';
 export type ColorKey = keyof typeof Colors.light;
+export type ColorPalette = typeof Colors.light;

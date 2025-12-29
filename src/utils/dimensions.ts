@@ -42,3 +42,5 @@ export const dimensions = {
   width: SCREEN_WIDTH,
   height: SCREEN_HEIGHT,
 };
+
+export const marginApp = scale(16);
