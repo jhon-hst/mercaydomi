@@ -1,12 +1,16 @@
 import '@/i18n';
 import { useFonts } from 'expo-font';
+import { useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
+import { useColorScheme } from './useColorScheme';
 
 SplashScreen.preventAutoHideAsync();
 
 export const useInitLoad = () => {
   const [loaded, setLoaded] = useState(false);
+  const colorScheme = useColorScheme();
+  const router = useRouter();
 
   const [loadedFonts, errorFonts] = useFonts({
     'Inter-ExtraLight': require('../assets/fonts/inter/Inter-ExtraLight.otf'),
@@ -28,5 +32,7 @@ export const useInitLoad = () => {
 
   return {
     loaded,
+    colorScheme,
+    router,
   };
 };

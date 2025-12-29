@@ -4,6 +4,9 @@ splash ✅
 Button
 onboarding
 login
+agregar mmkv 
+agregar zuntand
+El onboarding solo se muestra una sola vez 
 
 Crear proyecto en supabase (test)
     - pensar en la arquitectura de supabase

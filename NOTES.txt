@@ -1,0 +1,3 @@
+splash en android presenta una pantalla negra intermedia en algunos dispositivos pero en modo debugger, en modo release no segun issue reportado: https://github.com/expo/expo/issues/35205
+
+la carpeta (zShared) es para que no se reestablezca el estado navigation https://medium.com/@siddhantshelake/best-practices-for-expo-router-tabs-stacks-shared-screens-b3cacc3e8ebb

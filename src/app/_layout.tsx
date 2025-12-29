@@ -1,26 +1,26 @@
-import { useColorScheme, useInitLoad } from '@/hooks';
+import { useInitLoad } from '@/hooks';
+import { LayoutProvider } from '@/providers';
 import {
   DarkTheme,
   DefaultTheme,
   ThemeProvider,
 } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const { loaded } = useInitLoad();
+  const { loaded, colorScheme } = useInitLoad();
 
   if (!loaded) {
     return null;
   }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <LayoutProvider>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="(zShared)" options={{ headerShown: false }} />
+        </Stack>
+      </ThemeProvider>
+    </LayoutProvider>
   );
 }
