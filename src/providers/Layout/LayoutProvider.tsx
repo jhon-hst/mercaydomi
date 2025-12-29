@@ -1,5 +1,4 @@
 import { useColors } from '@/hooks';
-import { StatusBar } from 'expo-status-bar';
 import { createContext, ReactNode, useContext, useState } from 'react';
 import { ViewStyle } from 'react-native';
 import {
@@ -51,7 +50,6 @@ export const LayoutProvider = ({ children }: LayoutProviderProps) => {
     >
       <SafeAreaProvider>
         <SafeAreaView style={containerStyle} edges={edges}>
-          <StatusBar style="auto" animated={true} />
           {children}
         </SafeAreaView>
       </SafeAreaProvider>
