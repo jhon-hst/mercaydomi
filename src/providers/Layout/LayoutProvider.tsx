@@ -1,15 +1,19 @@
-import { StatusBar, StatusBarStyle } from 'expo-status-bar';
+import { useColors } from '@/hooks';
+import { StatusBar } from 'expo-status-bar';
 import { createContext, ReactNode, useContext, useState } from 'react';
 import { ViewStyle } from 'react-native';
-import { Edge, SafeAreaView } from 'react-native-safe-area-context';
+import {
+  Edge,
+  SafeAreaProvider,
+  SafeAreaView,
+} from 'react-native-safe-area-context';
 
 interface LayoutContextType {
-  statusBarStyle: StatusBarStyle;
   paddingHorizontal: number;
   edges: Edge[];
-  setStatusBarStyle: (style: StatusBarStyle) => void;
   setPaddingHorizontal: (padding: number) => void;
   setEdges: (edges: Edge[]) => void;
+  setBackgroundColor: (color: string) => void;
 }
 
 const LayoutContext = createContext<LayoutContextType | undefined>(undefined);
@@ -19,8 +23,9 @@ interface LayoutProviderProps {
 }
 
 export const LayoutProvider = ({ children }: LayoutProviderProps) => {
-  const [statusBarStyle, setStatusBarStyle] = useState<StatusBarStyle>('light');
   const [paddingHorizontal, setPaddingHorizontal] = useState(16);
+  const Colors = useColors();
+  const [backgroundColor, setBackgroundColor] = useState(Colors.background);
   const [edges, setEdges] = useState<Edge[]>([
     'top',
     'bottom',
@@ -31,23 +36,25 @@ export const LayoutProvider = ({ children }: LayoutProviderProps) => {
   const containerStyle: ViewStyle = {
     flex: 1,
     paddingHorizontal,
+    backgroundColor: backgroundColor,
   };
 
   return (
     <LayoutContext.Provider
       value={{
-        statusBarStyle,
         paddingHorizontal,
         edges,
-        setStatusBarStyle,
         setPaddingHorizontal,
         setEdges,
+        setBackgroundColor,
       }}
     >
-      <SafeAreaView style={containerStyle} edges={edges}>
-        <StatusBar backgroundColor="#000000" />
-        {children}
-      </SafeAreaView>
+      <SafeAreaProvider>
+        <SafeAreaView style={containerStyle} edges={edges}>
+          <StatusBar style="auto" animated={true} />
+          {children}
+        </SafeAreaView>
+      </SafeAreaProvider>
     </LayoutContext.Provider>
   );
 };

@@ -21,6 +21,7 @@ export default function RootLayout() {
           <Stack.Screen name="(zShared)" options={{ headerShown: false }} />
         </Stack>
       </ThemeProvider>
+      {/* <StatusBar backgroundColor="#000000" /> */}
     </LayoutProvider>
   );
 }
