@@ -1,16 +1,13 @@
 import { createInstance } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import translationEn from './locales/en/translation.json';
-import translationEs from './locales/es/translation.json';
+// Importar traducciones
+import en from '../locales/en/translation.json';
+import es from '../locales/es/translation.json';
 
 const resources = {
-  en: {
-    translation: translationEn,
-  },
-  es: {
-    translation: translationEs,
-  },
+  es: { translation: es },
+  en: { translation: en },
 };
 
 const i18n = createInstance();

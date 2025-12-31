@@ -1,0 +1,11 @@
+{
+  "welcome": "Bienvenido",
+  "greeting": "Hola {{name}}",
+  "buttons": {
+    "submit": "Enviar",
+    "cancel": "Cancelar"
+  },
+  "errors": {
+    "network": "Error de conexión"
+  }
+}
