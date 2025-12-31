@@ -39,8 +39,8 @@ export const verticalScale = (size: number, factor: number = 0.5): number => {
 
 // Exportar dimensiones de pantalla por si las necesitas
 export const dimensions = {
-  width: SCREEN_WIDTH,
-  height: SCREEN_HEIGHT,
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
 };
 
 export const marginApp = scale(16);

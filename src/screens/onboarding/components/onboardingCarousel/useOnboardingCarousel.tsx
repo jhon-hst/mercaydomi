@@ -1,15 +1,15 @@
-import { useAppContext } from '@core/context';
-import { Screen } from '@core/navigation/appNavigation.type.ts';
+import { useColors } from '@/hooks';
 import { useRef, useState } from 'react';
 import { ICarouselInstance } from 'react-native-reanimated-carousel';
-import { OnboardingItem } from '../../screens/useWelcomeOnboarding.ts';
+import { OnboardingItem } from '../../useOnboarding';
+
 interface UseCarouselProps {
   data: OnboardingItem[];
 }
-export const useCarousel = ({ data }: UseCarouselProps) => {
+export const useOnboardingCarousel = ({ data }: UseCarouselProps) => {
   const [currentItem, setCurrentItem] = useState<number>(0);
-  const { color, navigation } = useAppContext();
   const refCarousel = useRef<ICarouselInstance>(null);
+  const Colores = useColors();
 
   const onChangeCurrentItem = (index: number) => {
     setCurrentItem(index);
@@ -21,14 +21,14 @@ export const useCarousel = ({ data }: UseCarouselProps) => {
 
   const onNext = () => {
     if (currentItem === data.length - 1) {
-      navigation.replace(Screen.WELCOME);
+      //navigate
     } else {
       refCarousel.current?.next();
     }
   };
 
   return {
-    color,
+    Colores,
     currentItem,
     onChangeCurrentItem,
     onNext,

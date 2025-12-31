@@ -4,18 +4,19 @@ import { Text } from '@/components';
 import { ColorPalette } from '@/constants';
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { OnboardingCarousel } from './components/onboardingCarousel/OnboardingCarousel';
 import { useOnboarding } from './useOnboarding';
 
 export const OnboardingScreen = () => {
-  const { Colors, t } = useOnboarding();
+  const { Colors, t, data } = useOnboarding();
   const styles = createStyles(Colors);
 
   return (
-    <View>
+    <View style={styles.container}>
       <TouchableOpacity onPress={() => {}} style={styles.containerSkipButton}>
         <Text>{t('welcome')}</Text>
       </TouchableOpacity>
-      {/* <OnboardingCarousel data={[1, 2]} /> */}
+      <OnboardingCarousel data={data} />
     </View>
   );
 };
