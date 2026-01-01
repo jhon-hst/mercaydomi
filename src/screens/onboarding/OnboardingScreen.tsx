@@ -14,7 +14,9 @@ export const OnboardingScreen = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => {}} style={styles.containerSkipButton}>
-        <Text>{t('welcome')}</Text>
+        <Text color="primary" fontFamily="Inter-Medium">
+          {t('Onboarding.skip')}
+        </Text>
       </TouchableOpacity>
       <OnboardingCarousel data={data} />
     </View>
@@ -25,6 +27,7 @@ const createStyles = (Colors: ColorPalette) =>
   StyleSheet.create({
     container: {
       backgroundColor: Colors.background,
+      flex: 1,
     },
     containerSkipButton: {
       alignItems: 'flex-end',

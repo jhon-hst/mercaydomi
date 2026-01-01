@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
+import { Images } from '@/assets/images';
 import { Carousel, Text } from '@/components';
 import { dimensions, marginApp } from '@/utils';
 import { OnboardingItem } from '../../useOnboarding';
@@ -22,17 +23,32 @@ export const OnboardingCarousel = ({ data }: CarouselProps) => {
           data={data}
           onChangeCurrentItem={onChangeCurrentItem}
           loop={false}
-          renderItem={({ item }) => (
+          renderItem={({ item }: { item: OnboardingItem }) => (
             <View style={styles.containerItem}>
               <View style={styles.containerImage}>
-                <Text style={styles.title}>{item.highlightTitle}</Text>
+                <Image source={Images.defaultImage} />
               </View>
               <View style={styles.containerTitle}>
-                <Text style={styles.title}>{item.highlightTitle}</Text>
-                <Text style={styles.title}>{item.title}</Text>
+                <Text>
+                  <Text type="t2" style={styles.title}>
+                    {item.titleFirstPart}{' '}
+                  </Text>{' '}
+                  <Text type="t2" color="primary" style={styles.title}>
+                    {item.titleSecondPart}
+                  </Text>{' '}
+                  <Text type="t2" style={styles.title}>
+                    {item.titleThirdPart}
+                  </Text>
+                </Text>
               </View>
               <View style={styles.containerDescription}>
-                <Text style={styles.description}>{item.description}</Text>
+                <Text
+                  color="textSecondary"
+                  style={styles.description}
+                  size={16}
+                >
+                  {item.description}
+                </Text>
               </View>
             </View>
           )}

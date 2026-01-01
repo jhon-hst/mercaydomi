@@ -7,5 +7,20 @@
   },
   "errors": {
     "network": "Error de conexión"
+  },
+  "Onboarding": {
+    "skip": "Saltar",
+    "slider1": {
+      "titleFirstPart": "1Ofertas exclusivas",
+      "titleSecondPart": "más productos",
+      "titleThirdPart": "por aquiii11i1",
+      "description": "Explora una amplia variedad de productos en nuestra plataforma."
+    },
+    "slider2": {
+      "titleFirstPart": "2Ofertas exclusivas",
+      "titleSecondPart": "más productos",
+      "titleThirdPart": "por aquiii11i2",
+      "description": "Aprovecha descuentos y promociones especiales solo para ti."
+    }
   }
 }

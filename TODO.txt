@@ -1,5 +1,6 @@
 
-
+CREAR EL COMPONENTE IMAGE   
+pasar la imagen por props al Carrusel del onboarding
 splash ✅
 Button
 onboarding

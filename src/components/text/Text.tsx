@@ -38,7 +38,7 @@ const getFontFamilyByType = (type?: TextType): FontFamilyType => {
 
   // Títulos usan Bold
   if (type.startsWith('t')) {
-    return 'Inter-Bold';
+    return 'Inter-SemiBold';
   }
 
   // Párrafos usan Regular

@@ -1,4 +1,4 @@
-import { ArrowBigRight } from 'lucide-react-native';
+import { ArrowLeft, ArrowRight } from 'lucide-react-native';
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
@@ -22,10 +22,11 @@ export const Arrows = ({ currentItem, data, onNext, onPrev }: ArrowsProps) => {
           <View />
         ) : (
           <TouchableOpacity onPress={onPrev} style={styles.arrowLeft}>
-            <ArrowBigRight
+            <ArrowLeft
               width={scale(30)}
               height={scale(30)}
               color={Colors.primary}
+              pointerEvents="none"
             />
           </TouchableOpacity>
         )}
@@ -43,10 +44,11 @@ export const Arrows = ({ currentItem, data, onNext, onPrev }: ArrowsProps) => {
       </View>
       <View style={styles.containerArrow}>
         <TouchableOpacity onPress={onNext} style={styles.arrowRight}>
-          <ArrowBigRight
+          <ArrowRight
             width={scale(30)}
             height={scale(30)}
-            color={Colors.primary}
+            color={Colors.background}
+            pointerEvents="none"
           />
         </TouchableOpacity>
       </View>
@@ -58,18 +60,17 @@ const createStyles = ({ primary }: ColorPalette) => {
     arrowLeft: {
       alignItems: 'center',
       borderColor: primary,
-      borderRadius: 10,
+      borderRadius: 50,
       borderWidth: 1,
       height: scale(60),
       justifyContent: 'center',
-      transform: [{ rotate: '180deg' }],
       width: scale(60),
     },
     arrowRight: {
       alignItems: 'center',
       alignSelf: 'flex-end',
       backgroundColor: primary,
-      borderRadius: 10,
+      borderRadius: 50,
       height: scale(60),
       justifyContent: 'center',
       width: scale(60),
@@ -99,10 +100,10 @@ const createStyles = ({ primary }: ColorPalette) => {
     paginationCircle: {
       backgroundColor: primary,
       borderRadius: 50,
-      height: scale(14),
+      height: scale(12),
       justifyContent: 'center',
-      opacity: 0.5,
-      width: scale(14),
+      opacity: 0.3,
+      width: scale(12),
     },
   });
   return styles;

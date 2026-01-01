@@ -5,37 +5,41 @@ import { useTranslation } from 'react-i18next';
 
 export type OnboardingItem = {
   id: number;
-  highlightTitle: string;
-  title: string;
+  titleFirstPart: string;
+  titleSecondPart: string;
+  titleThirdPart: string;
   description: string;
   image: any;
 };
 
 export const useOnboarding = () => {
-  const { setEdges } = useLayout();
+  const { setEdges, setPaddingHorizontal } = useLayout();
   const Colors = useColors();
   const { t } = useTranslation();
 
   const data: OnboardingItem[] = [
     {
-      description: t('welcome'),
-      highlightTitle: t('welcome'),
+      description: t('Onboarding.slider2.description'),
       id: 0,
       image: 'OnboardingSliderImage1',
-      title: t('welcome'),
+      titleFirstPart: t('Onboarding.slider1.titleFirstPart'),
+      titleSecondPart: t('Onboarding.slider1.titleSecondPart'),
+      titleThirdPart: t('Onboarding.slider1.titleThirdPart'),
     },
     {
-      description: t('welcome'),
-      highlightTitle: t('welcome'),
+      description: t('Onboarding.slider2.description'),
       id: 1,
       image: 'OnboardingSliderImage2',
-      title: t('welcome'),
+      titleFirstPart: t('Onboarding.slider2.titleFirstPart'),
+      titleSecondPart: t('Onboarding.slider2.titleSecondPart'),
+      titleThirdPart: t('Onboarding.slider2.titleThirdPart'),
     },
   ];
 
   useLayoutEffect(() => {
     setEdges(['top', 'bottom', 'left', 'right']);
-  }, [setEdges]);
+    setPaddingHorizontal(0);
+  }, [setEdges, setPaddingHorizontal]);
 
   return {
     Colors,

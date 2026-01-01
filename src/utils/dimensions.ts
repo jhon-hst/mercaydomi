@@ -43,4 +43,4 @@ export const dimensions = {
   SCREEN_HEIGHT,
 };
 
-export const marginApp = scale(16);
+export const marginApp = scale(20);
