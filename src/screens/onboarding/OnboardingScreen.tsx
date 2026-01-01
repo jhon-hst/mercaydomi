@@ -3,7 +3,7 @@ import { marginApp, scale } from '@/utils';
 import { Text } from '@/components';
 import { ColorPalette } from '@/constants';
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { OnboardingCarousel } from './components/onboardingCarousel/OnboardingCarousel';
 import { useOnboarding } from './useOnboarding';
 
@@ -13,6 +13,7 @@ export const OnboardingScreen = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor={Colors.background} barStyle="dark-content" />
       <TouchableOpacity onPress={() => {}} style={styles.containerSkipButton}>
         <Text color="primary" fontFamily="Inter-Medium">
           {t('Onboarding.skip')}

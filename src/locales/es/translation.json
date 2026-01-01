@@ -1,12 +1,7 @@
 {
-  "welcome": "Bienvenido",
-  "greeting": "Hola {{name}}",
-  "buttons": {
-    "submit": "Enviar",
-    "cancel": "Cancelar"
-  },
-  "errors": {
-    "network": "Error de conexión"
+  "Common": {
+    "signIn": "Iniciar sesión",
+    "signUp": "Regístrate"
   },
   "Onboarding": {
     "skip": "Saltar",
@@ -22,5 +17,9 @@
       "titleThirdPart": "por aquiii11i2",
       "description": "Aprovecha descuentos y promociones especiales solo para ti."
     }
+  },
+  "Welcome": {
+    "title": "¡Bienvenido a la aplicación!",
+    "description": "Explora una amplia variedad de productos en nuestra plataforma."
   }
 }

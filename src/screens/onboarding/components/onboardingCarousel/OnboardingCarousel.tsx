@@ -1,8 +1,8 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { Images } from '@/assets/images';
-import { Carousel, Text } from '@/components';
+import { Carousel, Image, Text } from '@/components';
 import { dimensions, marginApp } from '@/utils';
 import { OnboardingItem } from '../../useOnboarding';
 import { Arrows } from '../arrow/Arrow';

@@ -8,11 +8,21 @@ type TextType =
   | 't3'
   | 't4'
   | 't5'
+  | 't6'
+  | 't7'
+  | 't8'
+  | 't9'
+  | 't10'
   | 'p1'
   | 'p2'
   | 'p3'
   | 'p4'
-  | 'p5';
+  | 'p5'
+  | 'p6'
+  | 'p7'
+  | 'p8'
+  | 'p9'
+  | 'p10';
 
 type FontFamilyType =
   | 'Inter-ExtraLight'
@@ -29,7 +39,7 @@ interface TextProps {
   type?: TextType;
   size?: number;
   style?: TextStyle;
-  color?: 'primary' | 'textPrimary' | 'textSecondary';
+  color?: 'primary' | 'textPrimary' | 'textSecondary' | 'background';
   fontFamily?: FontFamilyType;
 }
 
@@ -46,7 +56,7 @@ const getFontFamilyByType = (type?: TextType): FontFamilyType => {
 };
 
 const getDefaultSize = (type?: TextType): number => {
-  if (!type) return 14;
+  if (!type) return scale(14);
 
   switch (type) {
     case 't1':
@@ -59,16 +69,36 @@ const getDefaultSize = (type?: TextType): number => {
       return scale(20);
     case 't5':
       return scale(18);
-    case 'p1':
-      return scale(18);
-    case 'p2':
+    case 't6':
       return scale(16);
-    case 'p3':
+    case 't7':
       return scale(14);
-    case 'p4':
+    case 't8':
       return scale(12);
-    case 'p5':
+    case 't9':
       return scale(10);
+    case 't10':
+      return scale(8);
+    case 'p1':
+      return scale(32);
+    case 'p2':
+      return scale(28);
+    case 'p3':
+      return scale(24);
+    case 'p4':
+      return scale(20);
+    case 'p5':
+      return scale(18);
+    case 'p6':
+      return scale(16);
+    case 'p7':
+      return scale(14);
+    case 'p8':
+      return scale(12);
+    case 'p9':
+      return scale(10);
+    case 'p10':
+      return scale(8);
     default:
       return scale(14);
   }
