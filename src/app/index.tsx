@@ -6,7 +6,7 @@ const hasSeenOnboarding = true;
 
 export default function Index() {
   if (hasSeenOnboarding) {
-    return <Redirect href="/(zShared)/welcome" />;
+    return <Redirect href="/(tabs)" />;
   }
   return <OnboardingScreen />;
 }

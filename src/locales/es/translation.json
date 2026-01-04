@@ -20,6 +20,7 @@
   },
   "Welcome": {
     "title": "¡Bienvenido a la aplicación!",
-    "description": "Explora una amplia variedad de productos en nuestra plataforma."
+    "description": "Explora una amplia variedad de productos en nuestra plataforma.",
+    "asAGuest": "Ingresar como invitado"
   }
 }

@@ -1,5 +1,5 @@
 import { Images } from '@/assets/images';
-import { Button, Image, Text } from '@/components';
+import { Button, Image, LinkButton, Text } from '@/components';
 import { ColorPalette } from '@/constants';
 import { scale } from '@/utils';
 import { StyleSheet, View } from 'react-native';
@@ -23,7 +23,10 @@ export const WelcomeScreen = () => {
       </View>
       <View style={styles.containerButton}>
         <Button>{t('Common.signIn')}</Button>
-        <Button>{t('Common.signUp')}</Button>
+        <Button variant="bordered">{t('Common.signUp')}</Button>
+        <LinkButton style={styles.asAGuestButton}>
+          {t('Welcome.asAGuest')}
+        </LinkButton>
       </View>
     </View>
   );
@@ -51,5 +54,8 @@ const createStyles = (Colors: ColorPalette) =>
     },
     description: {
       textAlign: 'center',
+    },
+    asAGuestButton: {
+      alignItems: 'center',
     },
   });

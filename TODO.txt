@@ -1,10 +1,39 @@
-
-CREAR EL COMPONENTE IMAGE ✅  
 pasar la imagen por props al Carrusel del onboarding
-splash ✅
-Button
 onboarding
+    welcome ☑️
+    carrusel ☑️
 login
+    agregar clerk
+    agregar estilos
+    iniciar sesión con Google y Apple (Apple solo en iOS)
+    iniciar con usuario y contraseña
+    Pensar si el usuario es mejor que sea el numero de teléfono en ese caso como se hace con gmail donde no hay teléfono
+    login screen
+    registro screen
+    crear el componente input, si es que clerk no lo provee    
+Home
+    Banners de publicidad
+    Carrusel de categorías
+    Lista de Productos
+    Buscador
+    Se muestra la dirección seleccionada o solo el icono si no tiene dirección
+    BottomMenu
+Carrito
+    Eliminar elementos
+    Incrementar cantidades
+Perfil 
+    Nombre
+    Correo 
+    Dirección
+Categorías
+    Buscador
+Producto
+    Agregar al carrito
+    Detalles
+    Imagenes
+    Video
+Crear logo
+agregar logo en el splash
 agregar mmkv 
 agregar zuntand
 El onboarding solo se muestra una sola vez 
@@ -12,6 +41,13 @@ El onboarding solo se muestra una sola vez
 Crear proyecto en supabase (test)
     - pensar en la arquitectura de supabase
 Crear Proyecto en clerk
+
+
+
+
+
+Vistas: 
+
 
 
 configurar CD/CI
@@ -33,39 +69,9 @@ Al detal y al mayor
 Idiomas español y inglés por defecto (español)
 
 
-Vistas: 
-Home
-Banners de publicidad
-Carrusel de categorías
-Productos
-
-
-Splash
-Logo
-Carrito
-Eliminar elementos
-Incrementar cantidades
-Perfil 
-Nombre
-Correo 
-Dirección
-Categorías
-Buscador
-Atras
-
-
-Producto
-Agregar al carrito
-Detalles
-Imagenes
-Video
-
-
-
-
-
 
 
 Wish
 Mostrar videos de cocina con las recetas, y poder enviar el domicilio con todo lo necesario para hacer este plato, además podrá calcular para cuantas personas es y así incrementar la cantidad de productos
 Hacer pagos desde la App
+notificaciones

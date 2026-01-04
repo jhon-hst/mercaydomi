@@ -17,3 +17,7 @@ capertas dentro de src ✅
     - contants ✅
 configurar Eslint ✅
 configurar idiomas ✅
+CREAR EL COMPONENTE IMAGE ✅  
+splash ✅
+onboarding ✅
+Button ✅
