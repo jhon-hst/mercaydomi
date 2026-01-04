@@ -1,7 +1,10 @@
 {
   "Common": {
     "signIn": "Iniciar sesión",
-    "signUp": "Regístrate"
+    "signUp": "Regístrate",
+    "home": "Inicio",
+    "shoppingCart": "Canasta",
+    "profile": "Perfil"
   },
   "Onboarding": {
     "skip": "Saltar",
