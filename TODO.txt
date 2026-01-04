@@ -17,7 +17,7 @@ Home
     Lista de Productos
     Buscador
     Se muestra la dirección seleccionada o solo el icono si no tiene dirección
-    BottomMenu
+    BottomMenu ☑️
 Carrito
     Eliminar elementos
     Incrementar cantidades

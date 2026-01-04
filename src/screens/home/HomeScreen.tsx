@@ -1,26 +1,35 @@
-import { Text } from '@/components';
-import { useColors } from '@/hooks';
-import { useTranslation } from 'react-i18next';
-import { View } from 'react-native';
+import { BannerCarousel } from '@/components';
+import { ColorPalette } from '@/constants';
+import { ScrollView, StyleSheet } from 'react-native';
+import { useHomeScreen } from './useHomeScreen';
 
+const carouselData = [
+  {
+    imageUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&s',
+  },
+  {
+    imageUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&s',
+  },
+  {
+    imageUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&s',
+  },
+];
 export const HomeScreen = () => {
-  const colors = useColors();
-  const { t } = useTranslation();
+  const { Colors } = useHomeScreen();
+  const style = createStyles(Colors);
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.background,
-      }}
-    >
-      <Text type="t1" color="primary">
-        {t('welcome')}
-      </Text>
-      <Text type="p2" color="textSecondary">
-        Bienvenido a mercadomy
-      </Text>
-    </View>
+    <ScrollView contentContainerStyle={style.container}>
+      <BannerCarousel items={carouselData} />
+    </ScrollView>
   );
 };
+
+const createStyles = (Colors: ColorPalette) =>
+  StyleSheet.create({
+    container: {
+      minHeight: '100%',
+    },
+  });

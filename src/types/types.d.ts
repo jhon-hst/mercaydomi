@@ -1,0 +1,3 @@
+interface BannerCarouselData {
+  imageUrl: string;
+}

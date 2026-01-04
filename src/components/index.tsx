@@ -1,3 +1,4 @@
+export * from './bannerCarousel/BannerCarousel';
 export * from './button/Button';
 export * from './carousel/Carousel';
 export * from './icon/Icon';
